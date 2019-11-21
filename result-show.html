@@ -20,45 +20,143 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!-- STYLE Drop Down -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
+		<style type="text/css">
+			.form-horizontal .form-group {
+				margin-right: -10px;
+				margin-left: -10px;
+			}
+			.btn-primary {
+				color: #fff;
+				background-color: #767676;
+				border-color: #636363;
+			}
+			.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+				color: #fff;
+				background-color: #595959;
+				border-color: #4a4a4a;
+			}
+			.btn {
+				display: inline-block;
+				padding: 7px 12px;
+				margin-bottom: 0;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-image: none;
+				border: 1px solid transparent;
+				border-radius: 4px;
+			}
+		</style>
+		<!-- STYLE Drop Down -->
 	</head>
-	<body class="landing">
+	<body>
 
 		<!-- Header -->
-			<header id="header" class="alt skel-layers-fixed">
-				<h1>
-					<img src="images/android-chrome-192x192.png" style="width: 49px;margin-top: 5px">
-					<a href="index.html" style="font-size: 20px;font-weight: bold;font-family: inherit;margin-left: 20px;margin-bottom: 50px">Cranach Digital Archive</a>
-				</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li>
-							<a href="" class="icon fa-angle-down">Kategorien</a>
-							<ul>
-								<li><a href="left-sidebar.html">Kategorie 1</a></li>
-								<li><a href="right-sidebar.html">Kategorie 2</a></li>
-								<li><a href="no-sidebar.html">Kategorie 3</a></li>
-								<li>
-									
-									<ul>
-										<li><a href="#">Option 1</a></li>
-										<li><a href="#">Option 2</a></li>
-										<li><a href="#">Option 3</a></li>
-										<li><a href="#">Option 4</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="elements.html">Blog</a></li>
-						<li><i class="fa fa-search" style="font-size:24px"></i></li>
-					</ul>
-				</nav>
-			</header>
-		<!-- timeline -->
-		<section class="cd-horizontal-timeline" style="margin-top: 100px">
+		<header id="header" class="alt skel-layers-fixed">
+
+			<h1>
+				<img src="images/android-chrome-192x192.png" style="width: 49px;margin-top: -4px;">
+				<a href="index.html" style="font-size: 20px;font-weight: bold;font-family: inherit;">Cranach Digital Archive</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#three">Kategorien</a></li>
+					<li><a target="_blank" href="http://lucascranach.org/index.php/lucas-cranach">Blog</a></li>
+				</ul>
+			</nav>
+			<div class="input-group" id="adv-search">
+				<input type="text" class="form-control" style="margin: 11px -2px;" placeholder="Suche nach Gemälde" />
+				<div class="input-group-btn">
+					<div class="btn-group" role="group">
+						<div class="dropdown dropdown-lg">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+							<div class="dropdown-menu dropdown-menu-right" role="menu">
+								<h4>Such Optionnen</h4>
+								<form class="form-horizontal" role="form">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="contain">Schlusselwörter</label>
+											<input class="form-control" type="text" style="border-radius: 0px;" />
+										</div>
+										<div class="form-group">
+											<label for="filter">Kunstler</label>
+											<select class="form-control" style="border-radius: 0px;">
+												<option value="0">-</option>
+												<option value="1">Lucas Cranach der Ältere</option>
+												<option value="2">Hans Cranach</option>
+												<option value="3">Lucas Cranach Der Jüngere</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="filter">Ort</label>
+											<select class="form-control" style="border-radius: 0px;">
+												<option value="0">-</option>
+												<option value="1">Winterthur</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="filter">Art der Kuns</label>
+											<select class="form-control" style="border-radius: 0px;">
+												<option value="0">-</option>
+												<option value="1">Gemälde</option>
+												<option value="2">Archivalien</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="filter">Datierung</label>
+											<select class="form-control" style="border-radius: 0px;">
+												<option value="0">-</option>
+												<option value="1500">1500</option>
+												<option value="1501">1501</option>
+												<option value="1502">1502</option>
+												<option value="1505">1505</option>
+												<option value="1507">1507</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="filter">Sortieren</label>
+											<select class="form-control" style="border-radius: 0px;">
+												<option value="0">-</option>
+												<option value="0">A-Z</option>
+												<option value="1">Z-A</option>
+											</select>
+										</div>
+										<button type="submit" class="btn btn-primary" style="float: right;">Suchen</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary" style="height: 36.5px;margin: auto;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<section id="banner">
+		</section>
+
+
+		<section class="cd-horizontal-timeline">
 			<div class="timeline">
 				<div class="events-wrapper">
 					<div class="events">
@@ -85,106 +183,101 @@
 				</ul> <!-- .cd-timeline-navigation -->
 			</div> <!-- .timeline -->
 
-			<div class="events-content" style="display: none">
-				<ol>
-					<li class="selected" data-date="1/1/1500">
-						<img src="images/Home.jpg">
-					</li>
 
-					<li data-date="1/1/1501">
-						<img src="images/cranach-4.jpg">
-					</li>
-
-					<li data-date="1/1/1502">
-						<img src="images/cranach-5.jpg">
-					</li>
-
-					<li data-date="1/1/1505">
-						<img src="images/cranach-6.jpg">
-					</li>
-
-					<li data-date="1/1/1507">
-						<img src="images/cranach-7.jpg">
-					</li>
-
-					<li data-date="1/1/1509">
-						<img src="images/cranach-8.jpg">
-					</li>
-
-					<li data-date="1/1/1510">
-						<img src="images/cranach-9.jpg">
-					</li>
-
-					<li data-date="1/1/1520">
-						<img src="images/cranach-3.jpg">
-					</li>
-
-
-				</ol>
-			</div> <!-- .events-content -->
 		</section>
-		<!-- Banner -->
 
-		<div class="container">
-			<div class="row">
-				<img class="img" src="images/cranach-3.jpg" class="img"/>
-				<div>
-					<div class="box-1">
-						<h3 class="align-center"><b>Bildnis des Johannes</b></h3>
-						<span><b>Gemälde</b> : </span><span>CDA ID / Inventarnummer</span>
-						<p><b>Titel</b> : Kreuzigung Christi, sog. "Schottenkreuzigung"	</p>
-						<p><b>Zuschreibung</b> : Lucas Cranach der Ältere</p>
-						<p><b>Datierung</b> : 1501</p>
-						<p><b>Eigentümer / Besitzer / Standort: CDA ID / Inventarnummer </b>: 	Kunsthistorisches Museum, Wien</p>
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+
+				<div class="container">
+					<div class="row 150%">
+						<div class="8u 12u$(2)">
+						
+							<!-- Content -->
+								<section id="content">
+									<a href="#" class="image fit"><img src="images/cranach-3.jpg" alt="" /></a>
+									<table>
+										<tr>
+											<th><b>Kurzbeschreibung:</b></th>
+											<th>Vielfigurige Kreuzigung in felsiger Landschaft, das Kreuz in der Bildmitte, aus einem rohen, nur grob behauenen Baumstamm gebildet, der Körper Christi blutüberströmt und stark von den Spuren der Passion gezeichnet, links und rechts von den beiden, ebenfalls auf rohen Baumstämmen gekreuzigten Schächern flankiert. Die Assistenzfiguren am Fuß des Kreuzes sind in zwei Gruppen geteilt, links die trauernden Frauen um Maria mit Johannes, ganz am linken Bildrand eine bäuerlich gekleidete Figur, rechts eine Gruppe von drei auffallend gekleideten Reitern. [Karl Schütz, 2005]</th>
+										</tr>
+										<tr>
+											<th>Provinenz:</th>
+											<th>- erstmals nachweisbar um 1800, handschriftliches Inventar des Schottenstiftes, sub Nr. 24 als Lucas van Leyden</br>
+												- Schottenstift Wien (Inventar von 1842 als Lucas van Leyden, siehe: [Dörnhöffer 1904, Sp. 188]</br>
+												- Erwerbung des Kunsthistorischen Museums, Wien 1934</br>
+
+												Dokumente [Archiv der Gemäldegalerie, KHM]:</br>
+												- Gal. Akt Z.17/1934: Stix an die Zentralstelle für Denkmalschutz am 23.10.1934: Prälat Peichl hat am Vortag angerufen und mitgeteilt, dass das Schottenstift vorerst nicht genötigt wäre, die Schottenkreuzigung zu verkaufen; Stix versicherte ihm, sollte es demnächst doch nötig werden, so würde das KHM einen angemessenen Preis zahlen, denn es liegt ein "bedeutendes öffentliches Interesse vor, dass dieses Bild, welches auf eine ganz besondere Weise mit Oesterreich verbunden ist, nicht in das Ausland gelange."</br>
+												- Gal. Akt Z.20/1934: (vgl. Zl. 25 u. 30 / ex 1932, Zl. 2, 5 u. 9 / ex 1934, Z. 33 /1933, Zl. 17 / 1934, Tausch XXIII) Pro Memoria 23.11.1934, Stix: Staatssekretär Dr. Pernter stimmt Erwerbung der Schottenkreuzigung zu, aus zwei Fonds finanziert um 90.910 Schilling. An Dr. Peichl, Abt-Koadjutor, 24.11.1934: Zentralstelle für Denkmalschutz bewilligt Verkauf ans KHM. Buchner (Bayr. Staatsgemäldesammlungen) an Buschbeck, 13.11.1934: "Ich habe gehört, dass die Cranach-Kreuzigung des Wiener Schottenstiftes locker sein soll." Sollte es das KHM nicht erwerben, würde sich die Alte Pinakothek darum bemühen.
+
+												[Alice Hoppe-Harnoncourt, 2010]</th>
+										</tr>
+										<tr>
+											<th>Ausstellungen:</th>
+											<th>Wien 1935</br>
+												Berlin 1937, Nr. 1</br>
+												München 1938, Nr. 388</br>
+												Wien 1939, Nr. 180</br>
+												Amsterdam 1947, Nr. 39</br>
+												Paris 1947</br>
+												Stockholm 1948, Nr. 169</br>
+												Kopenhagen 1948, Nr. 43</br>
+												Art Treasures from Vienna, 1949, ill. 8, Nr. 42</br>
+												Wien 1950</br>
+												Oslo 1952, Nr. 36</br>
+												Graz 1953, Nr. 23;</br>
+												St. Florian 1965, Nr. 25</br>
+												Wien 1972, Nr. 1;</br>
+												Kronach 1994, Nr. 110</br>
+												Jerusalem 1996</br>
+												Wiener Neustadt 2000, Nr. 101</br>
+												Tokyo, Kyoto 2002/2003, Nr. 2</br>
+												Frankfurt, London 2007/2008, Nr. 2</br>
+												Brüssel 2010/11, Nr. 5</th>
+										</tr>
+									</table>
+								</section>
+
+						</div>
+						<div class="4u 12u$(2)">
+						
+							<!-- Sidebar -->
+								<section id="sidebar">
+									<section>
+										<table>
+											<tr>
+												<th colspan="2"><h3>Bildnis des Johannes</h3></th>
+											</tr>
+											<tr>
+												<th><b>Gemälde</b></th>
+												<th>CDA ID / Inventarnummer</th>
+											</tr>
+											<tr>
+												<th><b>Titel</b></th>
+												<th>Kreuzigung Christi, sog. "Schottenkreuzigung"	</th>
+											</tr>
+											<tr>
+												<th><b>Zuschreibung</b></th>
+												<th> Lucas Cranach der Ältere</th>
+											</tr>
+											<tr>
+												<th><b>Datierung</b></th>
+												<th>1501</th>
+											</tr>
+											<tr>
+												<th><b>Eigentümer / Besitzer / Standort: CDA ID / Inventarnummer</b></th>
+												<th> Kunsthistorisches Museum, Wien</th>
+											</tr>
+										</table>
+									</section>
+									<hr />
+								</section>
+
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="box-2">
-				<table>
-					<tr>
-						<th><b>Kurzbeschreibung:</b></th>
-						<th>Vielfigurige Kreuzigung in felsiger Landschaft, das Kreuz in der Bildmitte, aus einem rohen, nur grob behauenen Baumstamm gebildet, der Körper Christi blutüberströmt und stark von den Spuren der Passion gezeichnet, links und rechts von den beiden, ebenfalls auf rohen Baumstämmen gekreuzigten Schächern flankiert. Die Assistenzfiguren am Fuß des Kreuzes sind in zwei Gruppen geteilt, links die trauernden Frauen um Maria mit Johannes, ganz am linken Bildrand eine bäuerlich gekleidete Figur, rechts eine Gruppe von drei auffallend gekleideten Reitern. [Karl Schütz, 2005]</th>
-					</tr>
-					<tr>
-						<th>Provinenz:</th>
-						<th>- erstmals nachweisbar um 1800, handschriftliches Inventar des Schottenstiftes, sub Nr. 24 als Lucas van Leyden</br>
-							- Schottenstift Wien (Inventar von 1842 als Lucas van Leyden, siehe: [Dörnhöffer 1904, Sp. 188]</br>
-							- Erwerbung des Kunsthistorischen Museums, Wien 1934</br>
-
-							Dokumente [Archiv der Gemäldegalerie, KHM]:</br>
-							- Gal. Akt Z.17/1934: Stix an die Zentralstelle für Denkmalschutz am 23.10.1934: Prälat Peichl hat am Vortag angerufen und mitgeteilt, dass das Schottenstift vorerst nicht genötigt wäre, die Schottenkreuzigung zu verkaufen; Stix versicherte ihm, sollte es demnächst doch nötig werden, so würde das KHM einen angemessenen Preis zahlen, denn es liegt ein "bedeutendes öffentliches Interesse vor, dass dieses Bild, welches auf eine ganz besondere Weise mit Oesterreich verbunden ist, nicht in das Ausland gelange."</br>
-							- Gal. Akt Z.20/1934: (vgl. Zl. 25 u. 30 / ex 1932, Zl. 2, 5 u. 9 / ex 1934, Z. 33 /1933, Zl. 17 / 1934, Tausch XXIII) Pro Memoria 23.11.1934, Stix: Staatssekretär Dr. Pernter stimmt Erwerbung der Schottenkreuzigung zu, aus zwei Fonds finanziert um 90.910 Schilling. An Dr. Peichl, Abt-Koadjutor, 24.11.1934: Zentralstelle für Denkmalschutz bewilligt Verkauf ans KHM. Buchner (Bayr. Staatsgemäldesammlungen) an Buschbeck, 13.11.1934: "Ich habe gehört, dass die Cranach-Kreuzigung des Wiener Schottenstiftes locker sein soll." Sollte es das KHM nicht erwerben, würde sich die Alte Pinakothek darum bemühen.
-
-							[Alice Hoppe-Harnoncourt, 2010]</th>
-					</tr>
-					<tr>
-						<th>Ausstellungen:</th>
-						<th>Wien 1935</br>
-							Berlin 1937, Nr. 1</br>
-							München 1938, Nr. 388</br>
-							Wien 1939, Nr. 180</br>
-							Amsterdam 1947, Nr. 39</br>
-							Paris 1947</br>
-							Stockholm 1948, Nr. 169</br>
-							Kopenhagen 1948, Nr. 43</br>
-							Art Treasures from Vienna, 1949, ill. 8, Nr. 42</br>
-							Wien 1950</br>
-							Oslo 1952, Nr. 36</br>
-							Graz 1953, Nr. 23;</br>
-							St. Florian 1965, Nr. 25</br>
-							Wien 1972, Nr. 1;</br>
-							Kronach 1994, Nr. 110</br>
-							Jerusalem 1996</br>
-							Wiener Neustadt 2000, Nr. 101</br>
-							Tokyo, Kyoto 2002/2003, Nr. 2</br>
-							Frankfurt, London 2007/2008, Nr. 2</br>
-							Brüssel 2010/11, Nr. 5</th>
-					</tr>
-				</table>
-			</div>
-		</div>
-
-
+			</section>
 		<section id="three" class="wrapper style1">
 			<div class="container">
 				<header class="major">
@@ -197,7 +290,7 @@
 							<h3>Bildnis des Johannes</h3>
 							<p>Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.</p>
 							<ul class="actions">
-								<li><a href="result-show.html" class="button">Mehr erfahren</a></li>
+								<li><a href="result-show.html.old" class="button">Mehr erfahren</a></li>
 							</ul>
 						</article>
 					</div>
@@ -207,7 +300,7 @@
 							<h3>Bildnis des Johannes</h3>
 							<p>Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.</p>
 							<ul class="actions">
-								<li><a href="result-show.html" class="button">Mehr erfahren</a></li>
+								<li><a href="result-show.html.old" class="button">Mehr erfahren</a></li>
 							</ul>
 						</article>
 					</div>
@@ -217,7 +310,7 @@
 							<h3>Bildnis des Johannes</h3>
 							<p>Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.</p>
 							<ul class="actions">
-								<li><a href="result-show.html" class="button">Mehr erfahren</a></li>
+								<li><a href="result-show.html.old" class="button">Mehr erfahren</a></li>
 							</ul>
 						</article>
 					</div>
@@ -225,22 +318,51 @@
 				</div>
 			</div>
 		</section>
-
+			
 		<!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
-                <li><a href="https://twitter.com/lucasCranach5/media" target="_blank"  class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="https://www.facebook.com/Lucas-Cranach-49018502717/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="https://www.instagram.com/explore/tags/lucascranach/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-            </ul>
-            <ul class="menu">
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-            <span class="copyright">
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://twitter.com/lucasCranach5/media" target="_blank"  class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/Lucas-Cranach-49018502717/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/explore/tags/lucascranach/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+			</ul>
+			<ul class="menu">
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+			<span class="copyright">
 					&copy; Copyright. All rights reserved.
 				</span>
-        </footer>
+		</footer>
 
 	</body>
 	<script type="text/javascript" src="js/drop_down.js"></script>
+	<script type="text/javascript">
+		$( "#suche_option" ).submit(function( event ) {
+			var keywords = $("#keywords").val();
+			var kunstler = $('#kunstler').val();
+			var ort = $("#ort").val();
+			var art = $("#art").val();
+			var date = $("#datierung").val();
+			var sort = $("#sortieren").val();
+
+			if(keywords == "" && kunstler == "none" && ort == "none" && art  == "none" && date  == "none" && sort  == "none"){
+				alert("Bitte geben Sie mindestens ein Kriterium für Ihre Suche an")
+			}else if(date  != "none"){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a="+date;
+			}else if(keywords != ""){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a=1505";
+			}else if(kunstler != "none"){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a=1502";
+			}else if(ort != "none"){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a=1510";
+			}else if(art != "none"){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a=1509";
+			}else if(sort != "none"){
+				document.location.href="/lucas_cranach_Projekt1/result.html?a=1500";
+			}
+			console.log(keywords, kunstler, ort, art, date, sort)
+
+			event.preventDefault();
+		});
+	</script>
 </html>
