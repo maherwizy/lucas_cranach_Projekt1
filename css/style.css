@@ -1661,7 +1661,7 @@ Main Components
 .cd-horizontal-timeline .events-content li > * {
 	width: 100%;
     vertical-align: middle;
-    padding: 0px 93px;
+    padding: 0px 0px;
 }
 }
 .cd-horizontal-timeline .events-content h2 {
