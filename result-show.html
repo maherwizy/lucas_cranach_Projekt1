@@ -28,7 +28,10 @@
 
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
-				<h1><a href="index.html">Cranach Digital Archive</h1>
+				<h1>
+					<img src="images/android-chrome-192x192.png" style="width: 49px;margin-top: 5px">
+					<a href="index.html" style="font-size: 20px;font-weight: bold;font-family: inherit;margin-left: 20px;margin-bottom: 50px">Cranach Digital Archive</a>
+				</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -55,10 +58,73 @@
 				</nav>
 			</header>
 		<!-- timeline -->
+		<section class="cd-horizontal-timeline" style="margin-top: 100px">
+			<div class="timeline">
+				<div class="events-wrapper">
+					<div class="events">
+						<ol>
+							<li><a href="#0" data-date="1/1/1500" class="selected">1500</a></li>
+							<li><a href="#0" data-date="1/1/1501">1501</a></li>
+							<li><a href="#0" data-date="1/1/1502">1502</a></li>
+							<li><a href="#0" data-date="1/1/1505">1505</a></li>
+							<li><a href="#0" data-date="1/1/1507">1507</a></li>
+							<li><a href="#0" data-date="1/1/1509">1509</a></li>
+							<li><a href="#0" data-date="1/1/1510">1510</a></li>
+							<li><a href="#0" data-date="1/1/1520">1520</a></li>
 
+
+						</ol>
+
+						<span class="filling-line" aria-hidden="true"></span>
+					</div> <!-- .events -->
+				</div> <!-- .events-wrapper -->
+
+				<ul class="cd-timeline-navigation">
+					<li><a href="#0" class="prev inactive">Prev</a></li>
+					<li><a href="#0" class="next">Next</a></li>
+				</ul> <!-- .cd-timeline-navigation -->
+			</div> <!-- .timeline -->
+
+			<div class="events-content" style="display: none">
+				<ol>
+					<li class="selected" data-date="1/1/1500">
+						<img src="images/Home.jpg">
+					</li>
+
+					<li data-date="1/1/1501">
+						<img src="images/cranach-4.jpg">
+					</li>
+
+					<li data-date="1/1/1502">
+						<img src="images/cranach-5.jpg">
+					</li>
+
+					<li data-date="1/1/1505">
+						<img src="images/cranach-6.jpg">
+					</li>
+
+					<li data-date="1/1/1507">
+						<img src="images/cranach-7.jpg">
+					</li>
+
+					<li data-date="1/1/1509">
+						<img src="images/cranach-8.jpg">
+					</li>
+
+					<li data-date="1/1/1510">
+						<img src="images/cranach-9.jpg">
+					</li>
+
+					<li data-date="1/1/1520">
+						<img src="images/cranach-3.jpg">
+					</li>
+
+
+				</ol>
+			</div> <!-- .events-content -->
+		</section>
 		<!-- Banner -->
-			<section id="banner">
-			</section>
+
 		<div class="container">
 			<div class="row">
 				<img class="img" src="images/cranach-3.jpg" class="img"/>
@@ -176,4 +242,5 @@
         </footer>
 
 	</body>
+	<script type="text/javascript" src="js/drop_down.js"></script>
 </html>
