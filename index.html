@@ -308,8 +308,8 @@
 
 		  if(keywords == "" && kunstler == "none" && ort == "none" && art  == "none" && date  == "none" && sort  == "none"){
 		  	alert("Bitte geben Sie mindestens ein Kriterium für Ihre Suche an")
-		  }else if(date){
-		  	document.location.href="/result.html";
+		  }else if(date  != "none"){
+		  	document.location.href="/lucas_cranach_Projekt1/result.html?a="+date;
 		  }
 		  console.log(keywords, kunstler, ort, art, date, sort)
 		  
