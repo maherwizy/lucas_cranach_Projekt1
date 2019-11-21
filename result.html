@@ -144,7 +144,7 @@
 			                                        <option value="Z-A">Z-A</option>
 			                                    </select>
 			                                  </div>
-			                                  <button type="submit" class="btn btn-primary" style="float: right;">Suchen</button>
+			                                  <button type="submit" class="btn btn-primary" onclick="search()" style="float: right;">Suchen</button>
 		                            	</div>
 	                            </form>
 	                            </div>
@@ -353,5 +353,8 @@
 		  
 		  event.preventDefault();
 		});
+		function search(){
+			document.location.href="/lucas_cranach_Projekt1/result.html?a=1505";
+		}
 	</script>
 </html>
