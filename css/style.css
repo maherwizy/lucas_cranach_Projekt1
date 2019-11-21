@@ -1611,7 +1611,7 @@ Main Components
 .cd-horizontal-timeline .events-content {
   position: relative;
   width: 100%;
-  margin: 2em 0;
+  margin: 0em 0;
   overflow: hidden;
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
@@ -1664,8 +1664,12 @@ Main Components
   animation-direction: reverse;
 }
 .cd-horizontal-timeline .events-content li > * {
-  max-width: 800px;
-  margin: 0 auto;
+ 	margin: 0% 9% 0% 9%;
+    width: 80%;
+    height: 400px;
+    vertical-align: middle;
+    padding: 0px 93px;
+}
 }
 .cd-horizontal-timeline .events-content h2 {
   font-weight: bold;
