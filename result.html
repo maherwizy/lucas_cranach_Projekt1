@@ -2,7 +2,8 @@
 
 <html>
 	<head>
-		<title> </title>
+		<link rel="icon" href="images/favicon.ico">
+		<title>Lucas Cranach</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -89,38 +90,42 @@
 	                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
 	                            <div class="dropdown-menu dropdown-menu-right" role="menu">
 	                            	<h4>Such Optionnen</h4>
-	                            	<form class="form-horizontal" role="form">
+	                            	<form class="form-horizontal" id="suche_option" role="form">
 		                            	<div class="col-md-6">
 			                                  <div class="form-group">
 			                                    <label for="contain">Schlusselwörter</label>
-			                                    <input class="form-control" type="text" style="border-radius: 0px;" />
+			                                    <input class="form-control" id="keywords" type="text" style="border-radius: 0px;" />
 			                                  </div>
 			                                  <div class="form-group">
 			                                    <label for="filter">Kunstler</label>
-			                                    <select class="form-control" style="border-radius: 0px;">
-			                                        <option value="0">Lucas Cranach der Ältere</option>
-			                                        <option value="1">Hans Cranach</option>
-			                                        <option value="2">Lucas Cranach Der Jüngere</option>
+			                                    <select class="form-control" id="kunstler" style="border-radius: 0px;">
+			                                    	<option value="none">-</option>
+			                                        <option value="Lucas Cranach der Ältere">Lucas Cranach der Ältere</option>
+			                                        <option value="Hans Cranach">Hans Cranach</option>
+			                                        <option value="Lucas Cranach Der Jüngere">Lucas Cranach Der Jüngere</option>
 			                                    </select>
 			                                  </div>
 			                                  <div class="form-group">
 			                                    <label for="filter">Ort</label>
-			                                    <select class="form-control" style="border-radius: 0px;">
-			                                        <option value="0">Winterthur</option>
+			                                    <select class="form-control" id="ort" style="border-radius: 0px;">
+			                                    	<option value="none">-</option>
+			                                        <option value="Winterthur">Winterthur</option>
 			                                    </select>
 			                                  </div>
 		                            	</div>
 		                            	<div class="col-md-6">
 			                                  <div class="form-group">
-			                                    <label for="filter">Art der Kuns</label>
-			                                    <select class="form-control" style="border-radius: 0px;">
-			                                        <option value="0">Gemälde</option>
-			                                        <option value="1">Archivalien</option>
+			                                    <label for="filter">Art der Kunst</label>
+			                                    <select class="form-control" id="art" style="border-radius: 0px;">
+			                                    	<option value="none">-</option>
+			                                        <option value="Gemälde">Gemälde</option>
+			                                        <option value="Archivalien">Archivalien</option>
 			                                    </select>
 			                                  </div>
 			                                  <div class="form-group">
 			                                    <label for="filter">Datierung</label>
-			                                    <select class="form-control" style="border-radius: 0px;">
+			                                    <select id="datierung" class="form-control" style="border-radius: 0px;">
+			                                    	<option value="none">-</option>
 			                                        <option value="1500">1500</option>
 			                                        <option value="1501">1501</option>
 			                                        <option value="1502">1502</option>
@@ -130,9 +135,10 @@
 			                                  </div>
 			                                  <div class="form-group">
 			                                    <label for="filter">Sortieren</label>
-			                                    <select class="form-control" style="border-radius: 0px;">
-			                                        <option value="0">A-Z</option>
-			                                        <option value="1">Z-A</option>
+			                                    <select class="form-control" id="sortieren" style="border-radius: 0px;">
+			                                    	<option value="none">-</option>
+			                                        <option value="A-Z">A-Z</option>
+			                                        <option value="Z-A">Z-A</option>
 			                                    </select>
 			                                  </div>
 			                                  <button type="submit" class="btn btn-primary" style="float: right;">Suchen</button>
@@ -317,5 +323,23 @@
 			}
 		}
 		setTimeout(fuckingFunc, 0)
+
+		$( "#suche_option" ).submit(function( event ) {
+		  var keywords = $("#keywords").val();
+		  var kunstler = $('#kunstler').val();
+		  var ort = $("#ort").val();
+		  var art = $("#art").val();
+		  var date = $("#datierung").val();
+		  var sort = $("#sortieren").val();
+
+		  if(keywords == "" && kunstler == "none" && ort == "none" && art  == "none" && date  == "none" && sort  == "none"){
+		  	alert("Bitte geben Sie mindestens ein Kriterium für Ihre Suche an")
+		  }else if(date  != "none"){
+		  	document.location.href="/lucas_cranach_Projekt1/result.html?a="+date;
+		  }
+		  console.log(keywords, kunstler, ort, art, date, sort)
+		  
+		  event.preventDefault();
+		});
 	</script>
 </html>
