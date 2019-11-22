@@ -145,19 +145,15 @@
 								</form>
 							</div>
 						</div>
-						<button type="button" class="btn btn-primary" style="height: 36.5px;margin: auto;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						<button type="button" class="btn btn-primary" onclick="search()" style="height: 36.5px;margin: auto;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 					</div>
 				</div>
 			</div>
 		</header>
 
 
-		<section id="banner">
-		</section>
-
-
 		<section class="cd-horizontal-timeline">
-			<div class="timeline">
+			<div class="timeline" style="margin: 28px 5px 0px 76px;">
 				<div class="events-wrapper">
 					<div class="events">
 						<ol>
@@ -388,6 +384,11 @@
 		$('#1520').on('click', function () {
 			document.location.href="/lucas_cranach_Projekt1/result.html?a=1520";
 		})
+
+		function search(){
+			console.log("search")
+			document.location.href="/lucas_cranach_Projekt1/result.html?a=1505";
+		}
 
 	</script>
 </html>
