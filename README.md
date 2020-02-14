@@ -1,4 +1,4 @@
-# Lucas Cranach 
+# Cranach Digital Archive
 
 Projekt im Mastermodul "Projekt I - Vision & Konzept"
 ## Links
