@@ -1,4 +1,4 @@
-# Cranach Digital Archive
+# Cranach Timeline
 
 Projekt I - Vision & Konzept
 
